@@ -17,21 +17,19 @@
 #include <string>
 #include <ctime>
 
-using namespace std;
-
 class Transaction
 {
     
 public:
     Transaction();
-    Transaction(string from, string to, float amount);
-    string from_;
-    string to_;
+    Transaction(std::string from, std::string to, float amount);
+    std::string from_;
+    std::string to_;
     float amount_;
     time_t created_at;
     
-    string CreatedAtToString();
+    std::string CreatedAtToString();
 };
-
+ 
 #endif /* TRANSACTION_H */
 

@@ -13,7 +13,7 @@ Transaction::Transaction()
     
 }
 
-Transaction::Transaction(string from, string to, float amount)
+Transaction::Transaction(std::string from, std::string to, float amount)
 {
     from_ = from;
     to_ = to;
@@ -21,7 +21,7 @@ Transaction::Transaction(string from, string to, float amount)
     created_at = time(0);
 }
 
-string Transaction::CreatedAtToString()
+std::string Transaction::CreatedAtToString()
 {
     return ctime(&created_at);
 }
