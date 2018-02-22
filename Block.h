@@ -17,21 +17,28 @@
 #include "Transaction.h"
 #include <string>
 #include <ctime>
+#include <vector>
 
-class Block
+namespace block
 {
-    
-public:
-    Block();
-    Block(int index, Transaction data);
-    
-    int index_;
-    string prevHash;
-    time_t created_at;
-    Transaction data_;
-    
-    
-};
+    class Block
+    {
 
+    public:
+        Block();
+        Block(int index, Transaction* data);
+
+        std::string CreateHash();
+
+        int index_;
+        std::string prevHash;
+        time_t created_at;
+        Transaction* data_;
+
+
+    };
+
+    typedef std::vector<Block> block_vector; 
+}
 #endif /* BLOCK_H */
 
