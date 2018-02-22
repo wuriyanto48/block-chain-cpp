@@ -18,11 +18,11 @@
 
 using namespace std;
 
-//fill function that return char
-char fill_();
+namespace CodeGen{
 
-//gen function, for generate random code
-string gen();
+    //gen function, for generate random code
+    string gen();
+}
 
 #endif /* CODEGENERATOR_H */
 

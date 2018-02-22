@@ -18,6 +18,7 @@
 #include "sha256.h"
 
 using namespace std;
+using namespace CodeGen;
 
 /*
  * 
@@ -27,13 +28,7 @@ using namespace std;
 
 int main(int argc, char** argv) {
     
-    string input0 = "1738393";
-    
-    string input1 = "wuriyanto";
-    
-    string input2 = input0.append(input1);
-    
-    string res = sha256(input2);
+    string res = gen();
     
     cout << res;
 }

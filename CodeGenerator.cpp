@@ -31,7 +31,7 @@ char fill_()
     return alphanumeric[rand() % length];
 }
 
-string gen()
+string CodeGen::gen()
 {
     srand(time(0));
     string result;
