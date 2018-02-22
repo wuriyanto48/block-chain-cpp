@@ -18,7 +18,8 @@
 
 using namespace std;
 
-namespace CodeGen{
+namespace CodeGen
+{
 
     //gen function, for generate random code
     string gen();

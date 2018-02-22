@@ -8,11 +8,13 @@
 #include <string>
 #include <ctime>
 
-Transaction::Transaction(){
+Transaction::Transaction()
+{
     
 }
 
-Transaction::Transaction(string from, string to, float amount){
+Transaction::Transaction(string from, string to, float amount)
+{
     from_ = from;
     to_ = to;
     amount_ = amount;

@@ -26,7 +26,8 @@ using namespace CodeGen;
 
 
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) 
+{
     
     string res = gen();
     

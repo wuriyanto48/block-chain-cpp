@@ -18,7 +18,8 @@
 #include <string>
 #include <ctime>
 
-class Block{
+class Block
+{
     
 public:
     Block();

@@ -19,7 +19,8 @@
 
 using namespace std;
 
-class Transaction{
+class Transaction
+{
     
 public:
     Transaction();
