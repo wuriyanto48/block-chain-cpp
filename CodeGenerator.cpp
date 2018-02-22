@@ -4,11 +4,19 @@
  * and open the template in the editor.
  */
 
+/* 
+ * File:   main.cpp
+ * Author: Wuriyanto
+ *
+ * Created on February 22, 2018, 12:08 AM
+ */
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <ctime>
 #include <stdlib.h>
+#include "CodeGenerator.h"
 
 using namespace std;
 

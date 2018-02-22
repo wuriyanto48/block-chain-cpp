@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: wurianto
+ * Author: Wuriyanto
  *
  * Created on February 22, 2018, 12:08 AM
  */
@@ -14,6 +14,8 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include "CodeGenerator.h"
+#include "sha256.h"
 
 using namespace std;
 
@@ -21,13 +23,18 @@ using namespace std;
  * 
  */
 
-string gen();
 
 
 int main(int argc, char** argv) {
     
-    string res = gen();
+    string input0 = "1738393";
+    
+    string input1 = "wuriyanto";
+    
+    string input2 = input0.append(input1);
+    
+    string res = sha256(input2);
+    
     cout << res;
-    return 0;
 }
 
