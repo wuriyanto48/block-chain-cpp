@@ -18,8 +18,6 @@
 #include <stdlib.h>
 #include "CodeGenerator.h"
 
-using namespace std;
-
 
 static const char alphanumeric[] = "0123456789"
 "!@#$%^&*" "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "abcdefghijklmnopqrstuvwxyz";
@@ -31,10 +29,10 @@ char fill_()
     return alphanumeric[rand() % length];
 }
 
-string CodeGen::gen()
+std::string code_gen::gen()
 {
     srand(time(0));
-    string result;
+    std::string result;
     for(unsigned int i = 0;i < 20; i++)
     {
         result += fill_();

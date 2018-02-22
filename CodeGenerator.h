@@ -16,13 +16,11 @@
 
 #include <string>
 
-using namespace std;
-
-namespace CodeGen
+namespace code_gen
 {
 
     //gen function, for generate random code
-    string gen();
+    std::string gen();
 }
 
 #endif /* CODEGENERATOR_H */
