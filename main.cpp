@@ -14,11 +14,12 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "CodeGenerator.h"
-#include "sha256.h"
+#include "Transaction.h"
+#include "Block.h"
 
 using namespace std;
-using namespace CodeGen;
 
 /*
  * 
@@ -29,8 +30,13 @@ using namespace CodeGen;
 int main(int argc, char** argv) 
 {
     
-    string res = gen();
+    Transaction trans;
+    trans.from_ = "Wuriyanto";
+    trans.to_ = "Alex";
+    trans.amount_ = 85000.5;
     
-    cout << res;
+    block::Block block(1, &trans);
+    std::string hashedTrans = block.CreateHash();
+    std::cout << hashedTrans;
 }
 
