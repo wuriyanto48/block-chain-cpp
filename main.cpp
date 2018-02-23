@@ -26,8 +26,6 @@ using namespace std;
  * 
  */
 
-
-
 int main(int argc, char** argv) 
 {
     
@@ -59,5 +57,7 @@ int main(int argc, char** argv)
     
     std::cout << blockChain.GetBlocks().at(1).data_->from_ << std::endl;
     std::cout << blockChain.IsChainStillValid() << std::endl;
+    
+    
 }
 

@@ -14,13 +14,35 @@
 #ifndef CODEGENERATOR_H
 #define CODEGENERATOR_H
 
+#include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+#include <stdlib.h>
 
+static const char alphanumeric[] = "0123456789"
+"!@#$%^&*" "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "abcdefghijklmnopqrstuvwxyz";
+
+int length = sizeof(alphanumeric) - 1;
+
+static char fill_()
+{
+    return alphanumeric[rand() % length];
+}
+    
 namespace code_gen
 {
 
-    //gen function, for generate random code
-    std::string gen();
+    std::string gen()
+    {
+        srand(time(0));
+        std::string result;
+        for(unsigned int i = 0;i < 20; i++)
+        {
+            result += fill_();
+        }
+        return result;
+    }
 }
 
 #endif /* CODEGENERATOR_H */
