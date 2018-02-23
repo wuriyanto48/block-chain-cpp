@@ -21,8 +21,12 @@ block::Block::Block(int index, Transaction* data){
     created_at = time(0);
 }
 
+void block::Block::SetData(Transaction* data){
+    data_ = data;
+}
+
 std::string block::Block::CreateHash(){
     std::stringstream s;
-    s << index_ << prevHash << created_at << data_;
+    s << index_ << prev_hash << created_at << data_;
     return sha256(s.str());
 }

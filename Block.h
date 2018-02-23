@@ -27,11 +27,13 @@ namespace block
     public:
         Block();
         Block(int index, Transaction* data);
-
+        
+        void SetData(Transaction* data);
         std::string CreateHash();
 
         int index_;
-        std::string prevHash;
+        std::string prev_hash;
+        std::string current_hash;
         time_t created_at;
         Transaction* data_;
 
